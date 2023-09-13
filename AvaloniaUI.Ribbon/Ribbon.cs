@@ -461,7 +461,7 @@ namespace AvaloniaUI.Ribbon
         ItemsControl _groupsHost;
         ContentControl _mainPresenter;
         ContentControl _flyoutPresenter;
-        ItemsControl _itemHeadersPresenter;
+        ItemsPresenter _itemHeadersPresenter;
         ContextMenu _ctxMenu;        
 
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
@@ -473,7 +473,7 @@ namespace AvaloniaUI.Ribbon
             _mainPresenter = e.NameScope.Find<ContentControl>("PART_GroupsPresenterHolder");
             _flyoutPresenter = e.NameScope.Find<ContentControl>("PART_PopupGroupsPresenterHolder");
             
-            _itemHeadersPresenter = e.NameScope.Find<ItemsControl>("PART_ItemsPresenter11");
+            _itemHeadersPresenter = e.NameScope.Find<ItemsPresenter>("PART_ItemsPresenter");
 
             UpdatePresenterLocation(IsCollapsed);
 

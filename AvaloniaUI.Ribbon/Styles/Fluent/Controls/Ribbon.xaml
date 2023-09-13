@@ -62,13 +62,13 @@
                 </ToggleButton>
                 <Border x:Name="TabHeadersClipBorder" ClipToBounds="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-34,0,0">
 					
-                  <ItemsControl x:Name="PART_ItemsPresenter11" ItemsSource="{TemplateBinding Tabs}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,34,0,0">
-					  <ItemsControl.ItemsPanel>
+                  <ItemsPresenter x:Name="PART_ItemsPresenter" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,34,0,0">
+					  <ItemsPresenter.ItemsPanel>
 						  <ItemsPanelTemplate>
 							  <StackPanel x:Name="PART_TabsPanel" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 						  </ItemsPanelTemplate>
-					  </ItemsControl.ItemsPanel>
-                  </ItemsControl>
+					  </ItemsPresenter.ItemsPanel>
+                  </ItemsPresenter>
                 </Border>
               </DockPanel>
             </Panel>
