@@ -41,6 +41,202 @@
     <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.4" />
     <PackageReference Include="Avalonia.Themes.Simple" Version="11.0.4" />
   </ItemGroup>
+  <ItemGroup>
+    <Page Include="Styles\Default\AvaloniaRibbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\Gallery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\KeyTip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\QuickAccessToolbar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\Ribbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonContextualTabGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonDropDownButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonGroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonSplitButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonThemeColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Controls\RibbonWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Default\Res.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\AvaloniaRibbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\Gallery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\KeyTip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\QuickAccessToolbar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\Ribbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonContextualTabGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonDropDownButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonDropDownButtonItemPresenter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonGroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonSplitButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Controls\RibbonWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Fluent\Res.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Styles\Default\AvaloniaRibbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\Gallery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\KeyTip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\QuickAccessToolbar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\Ribbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonContextualTabGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonDropDownButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonGroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonSplitButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonThemeColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Controls\RibbonWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Default\Res.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\AvaloniaRibbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\Gallery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\KeyTip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\QuickAccessToolbar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\Ribbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonContextualTabGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonDropDownButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonDropDownButtonItemPresenter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonGroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonSplitButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Controls\RibbonWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Styles\Fluent\Res.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
 <Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="xcopy &quot;$(TargetDir)\*.dll&quot; &quot;C:\MasterImpulse\ThirdParty\&quot; /S /Y" />
 	</Target>

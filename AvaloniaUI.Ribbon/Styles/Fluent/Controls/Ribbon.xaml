@@ -60,15 +60,15 @@
                 <ToggleButton Name="ExpandCollapseToggleButton" Classes="RibbonToggleButton" VerticalAlignment="Stretch" IsChecked="{Binding IsCollapsed, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}" Focusable="False" DockPanel.Dock="Right" ToolTip.Tip="{DynamicResource AvaloniaRibbon.MinimizeRibbon}">
                   <Path Classes="RibbonExpandCollapsePath" Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}" StrokeThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="8" Height="4"/>
                 </ToggleButton>
-                <Border x:Name="TabHeadersClipBorder" ClipToBounds="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-34,0,0">
+                <Border x:Name="TabHeadersClipBorder" ClipToBounds="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
 					
-                  <ItemsPresenter x:Name="PART_ItemsPresenter" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,34,0,0">
-					  <ItemsPresenter.ItemsPanel>
+                  <ItemsControl x:Name="PART_ItemsPresenter11" ClipToBounds="False" ItemsSource="{TemplateBinding Tabs}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
+					  <ItemsControl.ItemsPanel>
 						  <ItemsPanelTemplate>
 							  <StackPanel x:Name="PART_TabsPanel" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 						  </ItemsPanelTemplate>
-					  </ItemsPresenter.ItemsPanel>
-                  </ItemsPresenter>
+					  </ItemsControl.ItemsPanel>
+                  </ItemsControl>
                 </Border>
               </DockPanel>
             </Panel>

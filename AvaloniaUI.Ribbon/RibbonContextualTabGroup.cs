@@ -13,6 +13,7 @@ using System.Collections.Specialized;
 using Avalonia.LogicalTree;
 using Avalonia.Controls;
 using System.Collections.ObjectModel;
+using DynamicData.Kernel;
 
 namespace AvaloniaUI.Ribbon
 {
@@ -79,7 +80,7 @@ namespace AvaloniaUI.Ribbon
         void SwitchToNextVisibleTab()
         {
             Ribbon rbn = RibbonControlExtensions.GetParentRibbon(this);
-            if ((rbn != null) && ((IAvaloniaList<object>)Items).Contains(rbn.SelectedItem))
+            if ((rbn != null) && Items.Contains(rbn.SelectedItem))
             {
                 int selIndex = rbn.SelectedIndex;
 

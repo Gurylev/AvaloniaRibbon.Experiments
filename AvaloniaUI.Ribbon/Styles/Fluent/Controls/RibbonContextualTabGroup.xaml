@@ -83,16 +83,13 @@
 			  Margin="5,7,5,5"
 			  Opacity="0.5"
 			  IsHitTestVisible="False"/>
-				
-				<ItemsPresenter Grid.Row="1" x:Name="PART_ItemsPresenter" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-					<ItemsPresenter.ItemsPanel>
-						<ItemsPanelTemplate>
-							<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-						</ItemsPanelTemplate>
-					</ItemsPresenter.ItemsPanel>
-				</ItemsPresenter>
-		
-			
+			<ItemsPresenter Grid.Row="1" x:Name="PART_ItemsPresenter" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<ItemsPresenter.ItemsPanel>
+					<ItemsPanelTemplate>
+						<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+					</ItemsPanelTemplate>
+				</ItemsPresenter.ItemsPanel>
+			</ItemsPresenter>
 			<!--<SelectingItemsControl				
 				HorizontalAlignment="Stretch"
 				VerticalAlignment="Stretch"
