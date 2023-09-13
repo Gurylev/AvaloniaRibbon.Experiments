@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=netstandard">
+  <sys:String x:Key="AvaloniaRibbon.File">Файл</sys:String>
+  <sys:String x:Key="AvaloniaRibbon.Recent">Недавние</sys:String>
+  <sys:String x:Key="AvaloniaRibbon.MinimizeRibbon">Минимизировать ленту</sys:String>
+  <sys:String x:Key="AvaloniaRibbon.GetHelp">Справка</sys:String>
+  <sys:String x:Key="AvaloniaRibbon.AddToQAT">Добавить на панель быстрого доступа</sys:String>
+  <sys:String x:Key="AvaloniaRibbon.CustomizeQAT">Настройка панели быстрого доступа</sys:String>
+  <sys:String x:Key="AvaloniaRibbon.MoreQATCommands">Больше команд...</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,28 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:AvaloniaUI.Ribbon.SampleV2"
+             x:Class="AvaloniaUI.Ribbon.SampleV2.App"
+			 RequestedThemeVariant="Light">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<!--ResourceInclude Source="avares://AvaloniaUI.Ribbon/Locale/te-st.xaml" /-->
+				<ResourceInclude Source="avares://AvaloniaUI.Ribbon/Locale/ru-ru.axaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
+	<Application.Styles>
+		<FluentTheme/>
+		<!--<StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/BaseLight.xaml" />
+        <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/Base.xaml" />
+        <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/FluentBaseLight.xaml" />
+        <StyleInclude Source="avares://Avalonia.Themes.Fluent/Accents/FluentControlResourcesLight.xaml" />
+        <StyleInclude Source="avares://Avalonia.Themes.Fluent/Controls/FluentControls.xaml" />-->
+
+
+		<StyleInclude Source="avares://AvaloniaUI.Ribbon/Styles/Fluent/AvaloniaRibbon.xaml" />
+	</Application.Styles>
+</Application>
