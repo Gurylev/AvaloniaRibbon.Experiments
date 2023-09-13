@@ -148,9 +148,9 @@ namespace AvaloniaUI.Ribbon
                     {
                         if (ctrl is RibbonContextualTabGroup ctx)
                         {
-                            newTabsList.Add(ctx);
-                            //foreach (RibbonTab tb in ctx.Items)
-                            //    newTabsList.Add(tb);
+                            //newTabsList.Add(ctx);
+                            foreach (RibbonTab tb in ctx.Items)
+                                newTabsList.Add(tb);
                         }
                         else if (ctrl is RibbonTab tab)
                             newTabsList.Add(tab);                        
@@ -461,7 +461,7 @@ namespace AvaloniaUI.Ribbon
         ItemsControl _groupsHost;
         ContentControl _mainPresenter;
         ContentControl _flyoutPresenter;
-        ItemsPresenter _itemHeadersPresenter;
+        ItemsControl _itemHeadersPresenter;
         ContextMenu _ctxMenu;        
 
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
@@ -473,7 +473,7 @@ namespace AvaloniaUI.Ribbon
             _mainPresenter = e.NameScope.Find<ContentControl>("PART_GroupsPresenterHolder");
             _flyoutPresenter = e.NameScope.Find<ContentControl>("PART_PopupGroupsPresenterHolder");
             
-            _itemHeadersPresenter = e.NameScope.Find<ItemsPresenter>("PART_ItemsPresenter");
+            _itemHeadersPresenter = e.NameScope.Find<ItemsControl>("PART_ItemsPresenter11");
 
             UpdatePresenterLocation(IsCollapsed);
 

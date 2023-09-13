@@ -16,16 +16,16 @@ using System.Collections.ObjectModel;
 
 namespace AvaloniaUI.Ribbon
 {
-    public class RibbonContextualTabGroup : TabItem, IRibbonTab
+    public class RibbonContextualTabGroup : HeaderedItemsControl, IRibbonTab
     {
-        public static readonly StyledProperty<ObservableCollection<IRibbonTab>> ContextualTabsProperty =
-  AvaloniaProperty.Register<RibbonContextualTabGroup, ObservableCollection<IRibbonTab>>(nameof(ContextualTabs));
+  //      public static readonly StyledProperty<ObservableCollection<IRibbonTab>> ContextualTabsProperty =
+  //AvaloniaProperty.Register<RibbonContextualTabGroup, ObservableCollection<IRibbonTab>>(nameof(ContextualTabs));
 
-        public ObservableCollection<IRibbonTab> ContextualTabs
-        {
-            get { return GetValue(ContextualTabsProperty); }
-            set { SetValue(ContextualTabsProperty, value); }
-        }
+  //      public ObservableCollection<IRibbonTab> ContextualTabs
+  //      {
+  //          get { return GetValue(ContextualTabsProperty); }
+  //          set { SetValue(ContextualTabsProperty, value); }
+  //      }
 
         //       public static readonly StyledProperty<IRibbonTab> SelectedTabProperty =
         //AvaloniaProperty.Register<RibbonContextualTabGroup, IRibbonTab>(nameof(SelectedTab));
@@ -37,21 +37,21 @@ namespace AvaloniaUI.Ribbon
         //       }
         static RibbonContextualTabGroup()
         {
-            //IsVisibleProperty.Changed.AddClassHandler<RibbonContextualTabGroup>((sender, e) =>
-            //{
-            //    if ((e.NewValue is bool visible) && (!visible))
-            //        sender.SwitchToNextVisibleTab();
-            //});
+            IsVisibleProperty.Changed.AddClassHandler<RibbonContextualTabGroup>((sender, e) =>
+            {
+                if ((e.NewValue is bool visible) && (!visible))
+                    sender.SwitchToNextVisibleTab();
+            });
 
-            //ItemsSourceProperty.Changed.AddClassHandler<RibbonContextualTabGroup>((sender, args) =>
-            //{
-            //    if (args.OldValue is INotifyCollectionChanged oldSource)
-            //        oldSource.CollectionChanged -= sender.ItemsCollectionChanged;
-            //    if (args.NewValue is INotifyCollectionChanged newSource)
-            //    {
-            //        newSource.CollectionChanged += sender.ItemsCollectionChanged;
-            //    }
-            //});
+            ItemsSourceProperty.Changed.AddClassHandler<RibbonContextualTabGroup>((sender, args) =>
+            {
+                if (args.OldValue is INotifyCollectionChanged oldSource)
+                    oldSource.CollectionChanged -= sender.ItemsCollectionChanged;
+                if (args.NewValue is INotifyCollectionChanged newSource)
+                {
+                    newSource.CollectionChanged += sender.ItemsCollectionChanged;
+                }
+            });
         }
 
         protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
@@ -72,23 +72,23 @@ namespace AvaloniaUI.Ribbon
         public RibbonContextualTabGroup()
         {
             //ItemsSource = new ObservableCollection<IRibbonTab>();
-            ContextualTabs = new ObservableCollection<IRibbonTab>();
-            //ContextualTabs.CollectionChanged += ItemsCollectionChanged;           
+            //ContextualTabs = new ObservableCollection<IRibbonTab>();
+            Items.CollectionChanged += ItemsCollectionChanged;           
         }
 
-        //void SwitchToNextVisibleTab()
-        //{
-        //    Ribbon rbn = RibbonControlExtensions.GetParentRibbon(this);
-        //    if ((rbn != null) && ((IAvaloniaList<object>)Items).Contains(rbn.SelectedItem))
-        //    {
-        //        int selIndex = rbn.SelectedIndex;
+        void SwitchToNextVisibleTab()
+        {
+            Ribbon rbn = RibbonControlExtensions.GetParentRibbon(this);
+            if ((rbn != null) && ((IAvaloniaList<object>)Items).Contains(rbn.SelectedItem))
+            {
+                int selIndex = rbn.SelectedIndex;
 
-        //        rbn.CycleTabs(false);
+                rbn.CycleTabs(false);
 
-        //        if (selIndex == rbn.SelectedIndex)
-        //            rbn.CycleTabs(true);
-        //    }
-        //}
+                if (selIndex == rbn.SelectedIndex)
+                    rbn.CycleTabs(true);
+            }
+        }
 
         protected void ItemsCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
