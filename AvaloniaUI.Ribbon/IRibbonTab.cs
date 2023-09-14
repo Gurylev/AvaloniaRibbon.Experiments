@@ -10,6 +10,6 @@ namespace AvaloniaUI.Ribbon
 {
     public interface IRibbonTab : IInputElement
     {
-
+        public bool IsSelected { get; set; }    
     }
 }

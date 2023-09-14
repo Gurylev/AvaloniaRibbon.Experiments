@@ -19,14 +19,14 @@ namespace AvaloniaUI.Ribbon
 {
     public class RibbonContextualTabGroup : HeaderedItemsControl, IRibbonTab
     {
-  //      public static readonly StyledProperty<ObservableCollection<IRibbonTab>> ContextualTabsProperty =
-  //AvaloniaProperty.Register<RibbonContextualTabGroup, ObservableCollection<IRibbonTab>>(nameof(ContextualTabs));
+        //      public static readonly StyledProperty<ObservableCollection<IRibbonTab>> ContextualTabsProperty =
+        //AvaloniaProperty.Register<RibbonContextualTabGroup, ObservableCollection<IRibbonTab>>(nameof(ContextualTabs));
 
-  //      public ObservableCollection<IRibbonTab> ContextualTabs
-  //      {
-  //          get { return GetValue(ContextualTabsProperty); }
-  //          set { SetValue(ContextualTabsProperty, value); }
-  //      }
+        //      public ObservableCollection<IRibbonTab> ContextualTabs
+        //      {
+        //          get { return GetValue(ContextualTabsProperty); }
+        //          set { SetValue(ContextualTabsProperty, value); }
+        //      }
 
         //       public static readonly StyledProperty<IRibbonTab> SelectedTabProperty =
         //AvaloniaProperty.Register<RibbonContextualTabGroup, IRibbonTab>(nameof(SelectedTab));
@@ -36,6 +36,8 @@ namespace AvaloniaUI.Ribbon
         //           get { return GetValue(SelectedTabProperty); }
         //           set { SetValue(SelectedTabProperty, value); }
         //       }
+
+        public bool IsSelected { get; set; } = false;
         static RibbonContextualTabGroup()
         {
             IsVisibleProperty.Changed.AddClassHandler<RibbonContextualTabGroup>((sender, e) =>

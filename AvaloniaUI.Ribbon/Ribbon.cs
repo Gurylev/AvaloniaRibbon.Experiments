@@ -312,13 +312,20 @@ namespace AvaloniaUI.Ribbon
                     if (rt.IsEffectivelyVisible && rt.IsEnabled && contextualVisible)
                     {
                         switchTabs = true;
+                        if (SelectedItem is RibbonTab ribtab)
+                        {
+                            ribtab.IsSelected = false;
+                        }
+                        rt.IsSelected = true;
                         break;
                     }
                 }  
             }
                    
-            if (switchTabs)
+            if (switchTabs) 
                 SelectedIndex = newIndex;
+
+
         }
 
         public void GoToPreviousTab()
@@ -461,7 +468,7 @@ namespace AvaloniaUI.Ribbon
         ItemsControl _groupsHost;
         ContentControl _mainPresenter;
         ContentControl _flyoutPresenter;
-        ItemsControl _itemHeadersPresenter;
+        ItemsControl _itemHeadersControl;
         ContextMenu _ctxMenu;        
 
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
@@ -473,14 +480,14 @@ namespace AvaloniaUI.Ribbon
             _mainPresenter = e.NameScope.Find<ContentControl>("PART_GroupsPresenterHolder");
             _flyoutPresenter = e.NameScope.Find<ContentControl>("PART_PopupGroupsPresenterHolder");
             
-            _itemHeadersPresenter = e.NameScope.Find<ItemsControl>("PART_ItemsPresenter11");
+            _itemHeadersControl = e.NameScope.Find<ItemsControl>("PART_ItemsHeadersControl");
 
             UpdatePresenterLocation(IsCollapsed);
 
 
             bool secondClick = false;
 
-            _itemHeadersPresenter.PointerReleased += (sneder, args) =>
+            _itemHeadersControl.PointerReleased += (sneder, args) =>
             {
                 if (IsCollapsed)
                 {
@@ -510,9 +517,14 @@ namespace AvaloniaUI.Ribbon
                     {
                         if(tab is RibbonTab rt)
                         {
-                            if (rt.IsPointerOver && rt.IsContextual)
+                            if (rt.IsPointerOver)
                             {
+                                if(SelectedItem is RibbonTab ribtab)
+                                {
+                                    ribtab.IsSelected = false;
+                                }
                                 SelectedItem = rt;
+                                rt.IsSelected = true;
                                 break;
                             }
                         }                        

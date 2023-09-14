@@ -62,7 +62,7 @@
                 </ToggleButton>
                 <Border x:Name="TabHeadersClipBorder" ClipToBounds="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
 					
-                  <ItemsControl x:Name="PART_ItemsPresenter11" ClipToBounds="False" ItemsSource="{TemplateBinding Tabs}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
+                  <ItemsControl x:Name="PART_ItemsHeadersControl" ClipToBounds="False" ItemsSource="{TemplateBinding Tabs}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
 					  <ItemsControl.ItemsPanel>
 						  <ItemsPanelTemplate>
 							  <StackPanel x:Name="PART_TabsPanel" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>

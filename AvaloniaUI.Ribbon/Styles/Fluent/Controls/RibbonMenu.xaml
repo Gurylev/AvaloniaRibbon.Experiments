@@ -27,7 +27,7 @@
                           HorizontalAlignment="Stretch"
                           VerticalAlignment="Stretch"
                           IsChecked="{Binding IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}"/>
-          <Popup x:Name="MenuPopup" PlacementTarget="{Binding #ContentButton}" PlacementConstraintAdjustment="None" PlacementMode="BottomEdgeAlignedLeft" VerticalOffset="0" HorizontalOffset="-1"  IsOpen="{Binding IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}" Width="500" MinHeight="300">
+          <Popup x:Name="MenuPopup" IsLightDismissEnabled="True" PlacementTarget="{Binding #ContentButton}" PlacementConstraintAdjustment="None" PlacementMode="BottomEdgeAlignedLeft" VerticalOffset="0" HorizontalOffset="-1"  IsOpen="{Binding IsMenuOpen, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}" Width="500" MinHeight="300">
             <Border x:Name="MenuRootBorder" Background="{DynamicResource MenuFlyoutPresenterBackground}" BorderBrush="{DynamicResource MenuFlyoutPresenterBorderBrush}" BorderThickness="{DynamicResource MenuFlyoutPresenterBorderThemeThickness}" CornerRadius="{DynamicResource OverlayCornerRadius}" TextBlock.Foreground="{DynamicResource ThemeForegroundBrush}">
             <!--BoxShadow="0 4 10 #40000000"-->
               <DockPanel>
